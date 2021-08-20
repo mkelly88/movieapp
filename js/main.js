@@ -7,7 +7,7 @@ $(document).ready(() => {
   });
   
   function getMovies(searchText){
-      axios.get('http://www.omdbapi.com?s='+searchText+'&apikey=45b28924')
+      axios.get('https://www.omdbapi.com?s='+searchText+'&apikey=45b28924')
       .then((response) => {
         console.log(response);
         let movies = response.data.Search;
@@ -31,9 +31,9 @@ $(document).ready(() => {
       });
   }
 
-  function movieSelected(id){
-      sessionStorage.setItem('movieId', id);
-      window.location = 'movie.html';
+  function parkSelected(id){
+      sessionStorage.setItem('parkId', id);
+      window.location = 'park.html';
       return false;
   }
 
